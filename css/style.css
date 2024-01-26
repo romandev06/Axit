@@ -57,19 +57,6 @@ main {
 
 .main__wrapper-section {
     padding: 207px 0 307px 0;
-    background-image: url(../img/bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.main__wrapper-section::after {
-    content: '';
-    background-color: rgb(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
 }
 
 .container {
@@ -80,7 +67,6 @@ main {
 /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
 
 header {
-    background-color: black;
     font-family: 'Open Sans', sans-serif;
     height: 76px;
     position: relative;
@@ -910,6 +896,10 @@ header {
     margin-bottom: 10px;
 }
 
+.modal-open {
+    overflow-x: scroll;
+}
+
 .topic {
     font-size: 18px;
     font-weight: 500;
@@ -1057,13 +1047,31 @@ footer {
     font-family: 'Raleway', sans-serif;
 }
 
+.global-bg {
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
 
+.global-bg::after {
+    content: '';
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
 
+.main__second {
+    background-color: white;
+}
 
-
-
-
-
+.global-bg__wrapper {
+    position: relative;
+}
 
 
 
@@ -1220,19 +1228,11 @@ footer {
     }
 
     .header__list {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header__list-hidden {
-        display: none;
-    }
-
-    .nav-icon-5 {
-        display: flex;
-        margin-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+
 
 @media (max-width: 800px) {
     .content {
@@ -1326,6 +1326,14 @@ footer {
         width: 290px;
         height: 80px;
     }
+
+    .header__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main__template img {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1418,6 +1426,21 @@ footer {
     .pro-card,
     .pro-card h4 {
         width: 290px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__list-hidden {
+        display: none;
+    }
+
+    .nav-icon-5 {
+        display: flex;
+        margin-left: 30px;
+    }
+
+    .main__template img {
+        margin-top: 0;
     }
 }
 

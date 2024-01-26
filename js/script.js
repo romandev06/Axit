@@ -25,6 +25,7 @@ window.addEventListener('keydown', function(event) {
 
 
 
+
 // Создание бургер меню  (стилизация)  (шаг №1)
 
 const icons = document.querySelectorAll('.icon');
@@ -33,19 +34,6 @@ icons.forEach (icon => {
         icon.classList.toggle("open");
     });
 });
-
-
-
-
-// Создание бургер меню  (основные действия) (шаг №2)
-
-const burgerButton = document.querySelector('.icon')
-const burgerMenu = document.querySelector('.header__list')
-
-
-burgerButton.addEventListener('click', function() {
-    burgerMenu.classList.toggle('header__list-hidden')
-})
 
 
 
